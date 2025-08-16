@@ -13,6 +13,12 @@ public class ProductController {
     @Autowired
     ProductService service;
 
+    @GetMapping("/")
+    public String aboutProject()
+    {
+        return "Welcome! This is a custom backend, bieng developed by Pranjal Garg. Checkout /products";
+    }
+
     @GetMapping("/products")
     public List<Product> getProducts() {
         return service.getProducts();
