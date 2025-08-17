@@ -79,6 +79,7 @@ curl https://pranjal.up.railway.app/capsule/1
 ```
 src/main/java/com/example/demo/
 ├── controller/
+│   ├── HomeController.java       # Root endpoint handler
 │   └── CapsuleController.java    # REST API endpoints
 ├── service/
 │   └── CapsuleService.java       # Business logic layer
@@ -97,7 +98,7 @@ src/main/java/com/example/demo/
 1. Clone the repository
 ```bash
 git clone https://github.com/pranjal-garg/springnew.git
-cd time-capsule-backend
+cd springnew
 ```
 
 2. Run the application
