@@ -18,6 +18,7 @@ A simple Spring Boot REST API for managing digital time capsules. Create, store,
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
+| GET | `/` | API welcome message and status |
 | GET | `/capsule` | Retrieve all time capsules |
 | GET | `/capsule/{id}` | Get a specific capsule by ID |
 | POST | `/capsule` | Create a new time capsule |
@@ -36,6 +37,11 @@ Each time capsule contains:
 ## 🧪 Try It Out
 
 **Test the live API with these examples:**
+
+**Check API status:**
+```bash
+curl https://pranjal.up.railway.app/
+```
 
 **Create a new capsule:**
 ```bash
@@ -90,7 +96,7 @@ src/main/java/com/example/demo/
 ### Setup
 1. Clone the repository
 ```bash
-git clone <repository-url>
+git clone https://github.com/pranjal-garg/springnew.git
 cd time-capsule-backend
 ```
 
