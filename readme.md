@@ -97,7 +97,7 @@ src/main/java/com/example/demo/
 ### Setup
 1. Clone the repository
 ```bash
-git clone [https://github.com/pranjal-garg/springnew.git](https://github.com/pranjal-garg/time-capsule-backend.git)
+git clone https://github.com/pranjal-garg/time-capsule-backend.git
 cd time-capsule-backend
 ```
 
