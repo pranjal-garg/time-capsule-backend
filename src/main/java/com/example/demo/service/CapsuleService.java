@@ -4,7 +4,6 @@ import com.example.demo.model.Capsule;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 @Service

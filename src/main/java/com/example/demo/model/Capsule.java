@@ -4,12 +4,12 @@ public class Capsule {
 
     private int capsuleId;
     private String title;
-    private String  message;
+    private String message;
     private String startDate;
     private String endDate;
 
 
-    public Capsule(int capsuleId, String title, String message,  String startDate, String endDate) {
+    public Capsule(int capsuleId, String title, String message, String startDate, String endDate) {
         this.capsuleId = capsuleId;
         this.title = title;
         this.message = message;

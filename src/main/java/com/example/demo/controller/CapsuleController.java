@@ -20,23 +20,23 @@ public class CapsuleController {
     }
 
     @GetMapping("/{capsuleId}")
-    public Capsule getProductById(@PathVariable int capsuleId) {
+    public Capsule getCapsuleById(@PathVariable int capsuleId) {
         return service.getCapsuleById(capsuleId);
     }
 
     @PostMapping
-    public void addProduct(@RequestBody Capsule capsule) {
+    public void addCapsule(@RequestBody Capsule capsule) {
         System.out.println(capsule);
         service.addCapsule(capsule);
     }
 
     @PutMapping
-    public void updateProduct(@RequestBody Capsule capsule) {
+    public void updateCapsule(@RequestBody Capsule capsule) {
         service.updateCapsule(capsule);
     }
 
     @DeleteMapping("/{capsuleId}")
-    public void deleteProductById(@PathVariable int capsuleId) {
+    public void deleteCapsuleById(@PathVariable int capsuleId) {
         service.deleteProduct(capsuleId);
     }
 }
