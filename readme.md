@@ -97,8 +97,8 @@ src/main/java/com/example/demo/
 ### Setup
 1. Clone the repository
 ```bash
-git clone https://github.com/pranjal-garg/springnew.git
-cd springnew
+git clone [https://github.com/pranjal-garg/springnew.git](https://github.com/pranjal-garg/time-capsule-backend.git)
+cd time-capsule-backend
 ```
 
 2. Run the application
