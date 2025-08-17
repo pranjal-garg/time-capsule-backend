@@ -8,6 +8,6 @@ public class HomeController {
 
     @GetMapping("/")
     public String home() {
-        return "Time Capsule API is running! Visit /capsule for endpoints.";
+        return "🕰️ Welcome to the Time Capsule API – Preserve your memories for the future. Visit /capsule to get started!";
     }
 }
