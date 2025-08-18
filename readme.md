@@ -2,7 +2,8 @@
 
 A simple Spring Boot REST API for managing digital time capsules. Create, store, and retrieve messages with scheduled access dates.
 
-🌐 **Live API**: [https://pranjal.up.railway.app](https://pranjal.up.railway.app)
+🌐 **Live API**: [https://pranjal.up.railway.app](https://pranjal.up.railway.app)  
+📱 **Flutter App**: *In Development*
 
 ## ✨ Features
 
@@ -118,7 +119,16 @@ mvn spring-boot:run
 - [ ] Input validation and error handling
 - [ ] Unit and integration tests
 - [ ] API documentation with Swagger/OpenAPI
-- [ ] Frontend web application
+- [x] Flutter mobile application *(in development)*
+- [ ] Push notifications for capsule opening dates
+
+## 📱 Mobile Application
+
+A Flutter mobile app is currently being developed to provide a user-friendly interface for creating and managing time capsules. The app will feature:
+- Intuitive capsule creation
+- Beautiful UI for viewing stored memories
+- Notification system for capsule opening dates
+- Offline support with sync capabilities
 
 ## 🤝 Contributing
 
