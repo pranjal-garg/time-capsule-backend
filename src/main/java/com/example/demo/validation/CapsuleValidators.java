@@ -49,9 +49,7 @@ public class CapsuleValidators {
         } else {
             try {
                 startDate = LocalDate.parse(capsule.getStartDate(), formatter);
-                if (startDate.isBefore(LocalDate.now())) {
-                    validationErrors.put("startDate", "Start date cannot be in the past");
-                }
+                // Allow any start date - no past date restriction
             } catch (DateTimeParseException e) {
                 validationErrors.put("startDate", "Start date must be in format dd-MM-yyyy");
             }
@@ -62,9 +60,7 @@ public class CapsuleValidators {
         } else {
             try {
                 endDate = LocalDate.parse(capsule.getEndDate(), formatter);
-                if (endDate.isBefore(LocalDate.now())) {
-                    validationErrors.put("endDate", "End date cannot be in the past");
-                }
+                // Allow any end date - no past date restriction
             } catch (DateTimeParseException e) {
                 validationErrors.put("endDate", "End date must be in format dd-MM-yyyy");
             }

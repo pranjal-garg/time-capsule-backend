@@ -37,6 +37,6 @@ public class CapsuleController {
 
     @DeleteMapping("/{capsuleId}")
     public void deleteCapsuleById(@PathVariable int capsuleId) {
-        service.deleteProduct(capsuleId);
+        service.deleteCapsule(capsuleId);
     }
 }
