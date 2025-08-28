@@ -28,8 +28,8 @@ public class CapsuleService {
     }
 
     public void addCapsule(Capsule capsule) {
-        capsuleValidator.validateCapsule(capsule);
-        capsuleValidator.checkForDuplicateId(capsule.getCapsuleId(), capsules);
+        capsuleValidator.validateAddCapsule(capsule);
+        capsule.setCapsuleId(capsules.size()+1);
         capsules.add(capsule);
     }
 

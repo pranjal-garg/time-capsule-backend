@@ -26,7 +26,6 @@ public class CapsuleController {
 
     @PostMapping
     public void addCapsule(@RequestBody Capsule capsule) {
-        System.out.println(capsule);
         service.addCapsule(capsule);
     }
 

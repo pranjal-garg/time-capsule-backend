@@ -13,6 +13,32 @@ import java.util.Map;
 
 public class CapsuleValidators {
 
+    public void validateAddCapsule(Capsule capsule) {
+        Map<String, String> validationErrors = new HashMap<>();
+
+        if (capsule == null) {
+            throw new CapsuleValidationException("Capsule cannot be null");
+        }
+        if (capsule.getCapsuleId() != 0) {
+            validationErrors.put("capsuleId", "Capsule ID not required");
+        }
+        if (capsule.getTitle() == null || capsule.getTitle().trim().isEmpty()) {
+            validationErrors.put("title", "Title cannot be null or empty");
+        }
+
+        if (capsule.getMessage() == null || capsule.getMessage().trim().isEmpty()) {
+            validationErrors.put("message", "Message cannot be null or empty");
+        }
+
+        validateDates(capsule, validationErrors);
+
+        if (!validationErrors.isEmpty()) {
+            throw new CapsuleValidationException("Validation failed", validationErrors);
+        }
+
+
+    }
+
     public void validateCapsule(Capsule capsule) {
         Map<String, String> validationErrors = new HashMap<>();
 
