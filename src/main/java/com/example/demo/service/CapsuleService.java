@@ -5,6 +5,7 @@ import com.example.demo.model.Capsule;
 import com.example.demo.validation.CapsuleValidators;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,18 +30,17 @@ public class CapsuleService {
 
     public void addCapsule(Capsule capsule) {
         capsuleValidator.validateAddCapsule(capsule);
-        capsule.setCapsuleId(capsules.size()+1);
+        updateCapsuleId(capsule);
+        updateCapsuleStatus(capsule);
         capsules.add(capsule);
     }
 
     public void updateCapsule(Capsule capsule) {
-        capsuleValidator.validateCapsule(capsule);
+        capsuleValidator.validateUpdateCapsule(capsule);
+        updateCapsuleStatus(capsule);
         for (Capsule p : capsules) {
             if (p.getCapsuleId() == capsule.getCapsuleId()) {
-                p.setTitle(capsule.getTitle());
-                p.setMessage(capsule.getMessage());
-                p.setStartDate(capsule.getStartDate());
-                p.setEndDate(capsule.getEndDate());
+                p.updateCapsule(capsule);
                 return;
             }
         }
@@ -55,5 +55,15 @@ public class CapsuleService {
             }
         }
         throw new CapsuleNotFoundException(capsuleId);
+    }
+
+    public void updateCapsuleId(Capsule capsule)
+    {
+        capsule.setCapsuleId(capsules.size() + 1);
+    }
+
+    public void updateCapsuleStatus(Capsule capsule) {
+        LocalDate today = LocalDate.now();
+        capsule.isLocked(!capsule.getEndDate().isBefore(today));
     }
 }
