@@ -15,9 +15,6 @@ public class CapsuleValidators {
         if (capsule == null) {
             throw new CapsuleValidationException("Capsule cannot be null");
         }
-        if (capsule.getCapsuleId() != 0) {
-            validationErrors.put("capsuleId", "Capsule ID not required");
-        }
         validateDates(capsule, validationErrors);
 
         if (!validationErrors.isEmpty()) {
@@ -30,9 +27,6 @@ public class CapsuleValidators {
 
         if (capsule == null) {
             throw new CapsuleValidationException("Capsule cannot be null");
-        }
-        if (capsule.getCapsuleId() <= 0) {
-            validationErrors.put("capsuleId", "Capsule ID must be a positive number");
         }
         validateDates(capsule, validationErrors);
 
